@@ -3,17 +3,17 @@ def ascendSort(list):
     ascended = []
     verifyPos = []
     while len(ascended) < len(list):
-        y = -1
+        indexCounter = -1
         for i in list:
-            y+=1
-            if y not in verifyPos:
+            indexCounter+=1
+            if indexCounter not in verifyPos:
                 if smallest is None:
                     smallest=i
-                    z=y
+                    smallestIndex=indexCounter
                 elif i <= smallest:  
                     smallest=i
-                    z=y
-        verifyPos.append(z)
+                    smallestIndex=indexCounter
+        verifyPos.append(smallestIndex)
         ascended.append(smallest)
         smallest = None
     return ascended
