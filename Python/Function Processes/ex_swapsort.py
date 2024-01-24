@@ -1,5 +1,14 @@
-def swapSort(list):
+def randomList():
+    import random
+    x = random.randrange(3,10)
+    preSort2 = []
+    while len(preSort2) < x:
+        preSort2.append(random.randrange(-999,999))
+    return preSort2
+
+def swapSort():
     currentIndex=0
+    list = randomList()
     while currentIndex<len(list):
         smallest = list[-1]
         smallestIndex=len(list)-1
@@ -10,7 +19,5 @@ def swapSort(list):
         list[smallestIndex],list[currentIndex]=list[currentIndex],list[smallestIndex]
         currentIndex+=1
     return(list)
-preSort = [-100,0,0,5,-9,43,-2,7,-99]
-print(swapSort(preSort))
-
+print(swapSort())
 
