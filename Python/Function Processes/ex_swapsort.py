@@ -1,10 +1,10 @@
 def randomList():
     import random
-    x = random.randrange(3,10)
-    preSort2 = []
-    while len(preSort2) < x:
-        preSort2.append(random.randrange(-999,999))
-    return preSort2
+    listLength = random.randrange(3,10)
+    preSort = []
+    while len(preSort) < listLength:
+        preSort.append(random.randrange(-999,999))
+    return preSort
 
 def swapSort():
     currentIndex=0
